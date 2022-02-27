@@ -13,14 +13,15 @@ body {
 }
 
 nav {
-  background-color: #F7ECDE;
+  background-color: #222C47;
   padding: 1em;
   height: 4em;
-  color: #111;
+  color: #F7ECDE;
+  width: 100%;
 }
 
 a {
-  color: #222C47;
+  color: #FBF8F1;
   text-decoration: none;
 }
 
@@ -33,7 +34,7 @@ a {
 }
 
 .logo {
-  font-size: 20px;
+  font-size: 24px;
   padding: 7.5px 10px 7.5px 0;  
 }
 
@@ -42,19 +43,69 @@ a {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  font-size: 20px;
 }
 
 
 .item li:hover{
-  color: #111;
+  color: #027B7E;
   transform: scale(1.2);
   text-shadow: none;
 }
 
 /* Style for containers */
 
-.container {
-  height: 400px;
+#main .container {
+  height: 600px;
   width: 100%;
-  background-color: #222C47;
+  display: flex;
+  flex-direction: row;
+}
+
+#main .conLeft{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+#main .conRight {
+  width: 50%;
+  align-items: flex-end;
+  background-color: white;
+}
+
+#main .conLeft h1 {
+  font-size: 150px;
+}
+
+#main .conLeft h2 {
+  font-size: 50px;
+  letter-spacing: 1px;
+}
+
+#main .conLeft p {
+  color: #38284B;
+  padding-top: 18px;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.conLeft h1, h2, p{
+  background: -webkit-linear-gradient(#54BAB9, #38284b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.conRight img { 
+  height: 600px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  #main .container {
+    flex-wrap: wrap;
+  }
 }
